@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/produtos/create',function(){
+    return view('produtos.create');
+});
+
+Route::get('/produtos', function(){
+    return view('produtos.show');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
